@@ -11,7 +11,8 @@ u.phone,
 s.type,
 s.price_per_night,
 p.id as property_id,
-p.name as property_name
+p.name as property_name,
+datediff(day, b.start_date, b.end_date) as stay_length
 from {{ ref('raw_bookings') }} b
 left join {{ ref('raw_users') }} u 
 on b.user_id = u.id
