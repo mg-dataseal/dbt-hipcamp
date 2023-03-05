@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: hipcamp
+    database: raw
+    schema: hipcamp
+    tables:
+      - name: bookings
+      - name: properties
+      - name: sites
+      - name: '"users"'

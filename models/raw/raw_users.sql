@@ -5,4 +5,5 @@
 }}
 
 select *
-from RAW.HIPCAMP."users"
+--from RAW.HIPCAMP."users"
+from {{ source('hipcamp', '"users"') }}

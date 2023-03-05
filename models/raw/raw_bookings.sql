@@ -5,4 +5,5 @@
 }}
 
 select *
-from RAW.HIPCAMP.BOOKINGS
+--from RAW.HIPCAMP.BOOKINGS
+from {{ source('hipcamp', 'bookings') }}
