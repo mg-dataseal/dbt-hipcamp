@@ -2,6 +2,7 @@ select
 b.booking_id,
 b.user_id,
 b.site_id,
+b.created_at,
 b.start_date,
 b.end_date,
 u.first_name,
@@ -12,6 +13,8 @@ s.type,
 s.price_per_night,
 p.property_id,
 p.name as property_name,
+rank() over (partition by b.user_id order by b.created_at) as booking_number, -- if order placed the same day, booking no is the same
+row_number() over (partition by b.user_id order by b.created_at) as booking_number2,
 datediff(day, b.start_date, b.end_date) as no_of_nights,
 no_of_nights * s.price_per_night as total_price
 from {{ ref('stg_bookings') }} b

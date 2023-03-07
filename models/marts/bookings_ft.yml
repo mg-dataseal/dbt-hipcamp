@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: booking_facts
+  - name: bookings_ft
     description: >
       This model denormalizes the bookings table and adds a few calculated fields.
     columns:
