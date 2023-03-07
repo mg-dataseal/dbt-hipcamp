@@ -36,7 +36,7 @@ models:
     # Applies to all files under models/example/
     raw:
       +materialized: table
-    staging:
+    staging: #minor transformation of raw files
       +materialized: view
     marts_transform: #applying business logic here
       +materialized: table 
