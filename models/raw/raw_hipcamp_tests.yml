@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: raw_users
+    columns:
+      - name: id
+        tests:
+          - unique
+          - not_null
+  - name: raw_bookings
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+  - name: raw_sites
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique
+  - name: raw_properties
+    columns:
+      - name: id
+        tests:
+          - not_null
+          - unique         
+          
+        
+    
