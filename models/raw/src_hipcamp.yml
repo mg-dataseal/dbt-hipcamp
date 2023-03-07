@@ -2,10 +2,12 @@ version: 2
 
 sources:
   - name: hipcamp
+    description: clone of Snowflake db data
     database: raw
     schema: hipcamp
     tables:
       - name: bookings
+        description: raw bookings data
       - name: properties
       - name: sites
       - name: '"users"'
