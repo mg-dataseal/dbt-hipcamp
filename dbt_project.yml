@@ -38,7 +38,7 @@ models:
       +materialized: table
     staging:
       +materialized: view
-    marts: #applying business logic here
+    marts_transform: #applying business logic here
       +materialized: table 
     reports: #aggregated or other derived tables for reporting purposes
       +materialized: table
